@@ -32,6 +32,7 @@ export default async function Home() {
                 <Link 
                   href={`/recipe/${recipe.id}`}
                   className='border border-gray-400 bg-slate-200'
+                  key = {recipe.id}
                 >
                   <Card>
                     <CardHeader>

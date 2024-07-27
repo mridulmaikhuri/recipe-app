@@ -33,6 +33,7 @@ async function RecipePage({ params }) {
           src={recipe.image}
           width={500}
           height={500}
+          alt="recipe image"
           className='w-[45vw] h-[70vh] ml-5'
         />
         <div>
@@ -53,7 +54,7 @@ async function RecipePage({ params }) {
           {
             recipe.instructions && recipe.instructions.length > 0 ?  
             recipe.instructions.map((instruction) => {
-              return <li>{instruction}</li>
+              return <li key={recipe.id}>{instruction}</li>
             }) : null
           }
         </ol>
