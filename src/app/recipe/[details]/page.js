@@ -41,7 +41,7 @@ async function RecipePage({ params }) {
             {
               recipe.ingredients && recipe.ingredients.length > 0 ?  
               recipe.ingredients.map((ingredient) => {
-                return <li>{ingredient}</li>
+                return <li key={recipe.id}>{ingredient}</li>
               }) : null
             }
           </ul>
